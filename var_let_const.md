@@ -51,12 +51,11 @@ console.log(discount); // 此时能访问在`if`结构体中运算的`discount`�
 
 此时我们就需要借助 `let` 关键字，来定义**块级作用域**。
 
-## let变量的特点
+## let和const共同点
 
 ### 块级作用域
 
-使用let声明的变量作用域在块级内生效。
-
+使用let、const声明的变量、常量作用域在块级内生效。
 ```
 var price = 100;
 var count = 10;
@@ -69,11 +68,24 @@ console.log(discount); // Uncaught ReferenceError: discount is not defined
  
 关注到`discount`是在`if`结构体中使用`let`关键字声明的，此时在`if`结构体外无法
 
+使用let声明的常量作用域在块级内生效。
+
+```
+var price = 100;
+var count = 10;
+if(count > 5) {
+const discount = price * .6;
+console.log(`The discount is ${discount}`);
+}
+console.log(discount); // Uncaught ReferenceError: discount is not defined
+```
+
 
 - let的这一特性常常用于定义一些局部变量。
+
 ```
 {
-    const name = 'curder';
+const name = 'curder';
 }
 ```
 
@@ -81,17 +93,17 @@ console.log(discount); // Uncaught ReferenceError: discount is not defined
 
 ```
 for (let i = 0; i < 10; i++) {
-    console.log(i);
-    setTimeout(function(){
-        console.log(`i:${i}`);
-    }, 1000);
+console.log(i);
+setTimeout(function(){
+console.log(`i:${i}`);
+}, 1000);
 }
 ```
 
-由于`let`声明的变量是块级作用域，所以每次循环变量的值将只在for循环中生效。
+由于`let`声明的变量是块级作用域，所以每次循环变量的值将只在for循环中生效。此时不能使用const关键字定义`i`常量。
 
 
-### let变量不能在相同作用域中重复声明变量
+### let和const在相同作用域中都不能重复定义常量或者变量
 
 ```
 let status = 1;
@@ -100,30 +112,13 @@ let status = 2; // Uncaught SyntaxError: Identifier 'status' has already been de
 
 重复声明同一个变量将报错。
 
-
-## conset常量的特点
-
-### 块级作用域
-
-使用let声明的常量作用域在块级内生效。
-
-```
-var price = 100;
-var count = 10;
-if(count > 5) {
-    const discount = price * .6;
-    console.log(`The discount is ${discount}`);
-}
-console.log(discount); // Uncaught ReferenceError: discount is not defined
-```
-
-### const变量不能在相同作用域中重复声明变量
 ```
 const status = 1;
 const status = 2; // Uncaught SyntaxError: Identifier 'status' has already been declared
 ```
 
 重复声明同一个常量将报错。
+
 
 ### 其他情况
 
