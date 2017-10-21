@@ -126,6 +126,14 @@ console.log(color); // 打印 undifined
 var color = 'yellow';
 ```
 
+如果使用const、或者lat声明的常量或者变量之前使用的话，将抛出如下错误
+
+```
+console.log(color); // Uncaught ReferenceError: color is not defined
+const color = 'yellow';
+```
+
+> 使用 `let` 或者 `const` 能有效的帮助我们养成变量或者常量未声明之前不要使用的好习惯。
 
 ### 其他情况
 
