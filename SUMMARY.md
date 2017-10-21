@@ -1,3 +1,3 @@
 # Table of content
 
-* [First Chapter](es5_study.md)
+* [var、let和const](es6_study.md)
