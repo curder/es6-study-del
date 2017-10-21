@@ -66,8 +66,38 @@ if(count > 5) {
 }
 console.log(discount); // Uncaught ReferenceError: discount is not defined
 ```
+ 
+关注到`discount`是在`if`结构体中使用`let`关键字声明的，此时在`if`结构体外无法
 
-### let变量不能在同级作用域中重复声明
+
+- let的这一特性常常用于定义一些局部变量。
+```
+{
+    const name = 'curder';
+}
+```
+
+- 使用let来定义for循环中的变量
+
+```
+for (let i = 0; i < 10; i++) {
+    console.log(i);
+    setTimeout(function(){
+        console.log(`i:${i}`);
+    }, 1000);
+}
+```
+
+由于`let`声明的变量是块级作用域，所以每次循环变量的值将只在for循环中生效。
+
+### let变量不能在相同作用域中重复声明变量
+
+```
+let status = 1;
+let status = 2; // Uncaught SyntaxError: Identifier 'status' has already been declareds
+```
+
+重复声明同一个变量将报错。
 
 
 ## conset常量的特点
@@ -86,5 +116,27 @@ if(count > 5) {
 console.log(discount); // Uncaught ReferenceError: discount is not defined
 ```
 
+### const变量不能在相同作用域中重复声明变量
+```
+const status = 1;
+const status = 2; // Uncaught SyntaxError: Identifier 'status' has already been declared
+```
 
+重复声明同一个常量将报错。
 
+### 其他情况
+
+如果常量的值是引用类型的时候，我们可以修改常量的属性。
+
+```
+const person = {name: "curder", age: 22}
+
+person.age = 23
+```
+此时打印`person`常量的值将得到修改后的结果。
+
+如果此时却是不允许修改常量的属性，那么可以使用`Object.freeze(obj)`的方式申明常量。[参考这里](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze)
+
+```
+const user = Object.freeze({name: 'curder', age: 20});
+```
