@@ -119,6 +119,13 @@ const status = 2; // Uncaught SyntaxError: Identifier 'status' has already been 
 
 重复声明同一个常量将报错。
 
+### 在未声明就是用的时候报错不同
+
+```
+console.log(color); // 打印 undifined
+var color = 'yellow';
+```
+
 
 ### 其他情况
 
