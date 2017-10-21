@@ -2,5 +2,5 @@
 
 * [Introduction](README.md)
 * [var、let和const](var_let_const.md)
-* [arrow\_function](arrowfunction.md)
+* [ES6中的箭头函数](arrow_function.md)
 
