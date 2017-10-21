@@ -67,6 +67,9 @@ if(count > 5) {
 console.log(discount); // Uncaught ReferenceError: discount is not defined
 ```
 
+### let变量不能在同级作用域中重复声明
+
+
 ## conset常量的特点
 
 ### 块级作用域
