@@ -1,4 +1,4 @@
 # ES6学习
 
 
-* [var、let和const](es6_study.md)
+* [var、let和const](var_let_const.md)
