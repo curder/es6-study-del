@@ -84,6 +84,30 @@ console.log(a, b, c); // 此时 a = 'Y'; b = 'o'; c = '.'
 ```
 
 
+### 在ES6中我们可以直接对函数的传参进行解包
+
+- 在ES5中，我们的代码可能是这样：
+
+```
+var arr = [1, 2];
+function test(a, b){
+    console.log(a);
+    console.log(b);
+}
+test(arr[0], arr[1]);
+```
+
+- 在ES6中，我们的代码可以是这样：
+
+```
+var arr = [1, 2];
+function test([a, b]){
+    console.log(a);
+    console.log(b);
+}
+test(arr);
+```
+
 ## 变量赋值在实际开发中的应用
 
 比如当我们在处理一个响应时，我们可以使用ES6的语法简写我们的变量赋值。
