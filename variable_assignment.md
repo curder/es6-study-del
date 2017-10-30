@@ -91,8 +91,8 @@ console.log(a, b, c); // 此时 a = 'Y'; b = 'o'; c = '.'
 ```
 var arr = [1, 2];
 function test(a, b){
-    console.log(a);
-    console.log(b);
+    console.log(a); // 1
+    console.log(b); // 2
 }
 test(arr[0], arr[1]);
 ```
@@ -102,14 +102,14 @@ test(arr[0], arr[1]);
 ```
 var arr = [1, 2];
 function test([a, b = 'default']) { // 如果不传递第二个值，则使用`default`
-    console.log(a);
-    console.log(b);
+    console.log(a); // 1
+    console.log(b); // 2
 }
 
 test(arr);
 ```
 
-上述`test`函数解决了我们变量的传参问题，但是这样写的话规定了我们传参的顺序，我们不能更改，如果在实际开发中，我们需要更改传参的顺序的话，可以使用对象传参的方式。
+> 上述`test`函数解决了我们变量的传参问题，但是这样写的话规定了我们传参的顺序，我们不能更改，如果在实际开发中，我们需要更改传参的顺序的话，可以使用对象传参的方式。
 
 - ES6中，对象传参示例：
 
@@ -117,12 +117,13 @@ test(arr);
 var object = {a: 1, b: 2};
 
 function test({a, b = 'default'}) { // 如果不传递第二个值，则使用`default`
-    console.log(a);
-    console.log(b);
+    console.log(a); // 1
+    console.log(b); // 2
 }
 
 test(object);
 ```
+> 上面的写法的话，就不用考虑函数传参的顺序问题。
 
 
 ## 变量赋值在实际开发中的应用
