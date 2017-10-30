@@ -42,3 +42,12 @@ console.log('Yo'.endsWith('o')); // true
 ```
 console.log('Yo '.repeat(10)); // 重复10次
 ```
+
+# 其他
+
+## 在ES6中，我们可以解包字符串的同时直接获取字符串的长度
+
+```
+let {length: StrLength} = 'Yo';
+console.log(StrLength); // 此时获取到字符串的长度是 2
+```
