@@ -97,7 +97,7 @@ function test(a, b){
 test(arr[0], arr[1]);
 ```
 
-- 在ES6中，我们的代码可以是这样：
+- 在ES6中，数组传参代码示例：
 
 ```
 var arr = [1, 2];
@@ -107,6 +107,22 @@ function test([a, b]){
 }
 test(arr);
 ```
+
+上述`test`函数解决了我们变量的传参问题，但是这样写的话规定了我们传参的顺序，我们不能更改，如果在实际开发中，我们需要更改传参的顺序的话，可以使用对象传参的方式。
+
+- ES6中，对象传参示例：
+
+```
+var object = {a: 1, b: 2};
+
+function test({a, b}){
+    console.log(a);
+    console.log(b);
+}
+
+test(object);
+```
+
 
 ## 变量赋值在实际开发中的应用
 
