@@ -101,10 +101,11 @@ test(arr[0], arr[1]);
 
 ```
 var arr = [1, 2];
-function test([a, b]){
+function test([a, b = 'default']) { // 如果不传递第二个值，则使用`default`
     console.log(a);
     console.log(b);
 }
+
 test(arr);
 ```
 
@@ -115,7 +116,7 @@ test(arr);
 ```
 var object = {a: 1, b: 2};
 
-function test({a, b}){
+function test({a, b = 'default'}) { // 如果不传递第二个值，则使用`default`
     console.log(a);
     console.log(b);
 }
