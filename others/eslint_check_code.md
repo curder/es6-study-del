@@ -18,6 +18,10 @@ npm i -g eslint
 
 ## 配置
 
+ESLint 的配置遵循优先获取文件所在同级目录下的配置文件 `.eslintrc.json`，如果不存在找其父级的配置文件，如果一直找不到的话将查找`~/.eslintrc.json`。
+
+### 基本配置
+
 ```
 eslint --init
 ```
@@ -25,11 +29,11 @@ eslint --init
 > `eslint --init` 适用于对某个项目进行设置和配置 ESLint，并在其运行的的目录执行本地安装的 ESLint 及 插件。
 > 如果倾向于使用全局安装的 ESLint，配置中使用的任何插件也必须是全局安装的。
 
-更多配置[参考这里](http://eslint.cn/docs/user-guide/getting-started#configuration)
+更多配置参数 [参考这里](http://eslint.cn/docs/user-guide/getting-started#configuration)
 
 
 
-[airbnb](https://github.com/airbnb/javascript)配置如下
+### [airbnb](https://github.com/airbnb/javascript)配置如下
 
 1. 选择 [airbnb](https://github.com/airbnb/javascript/tree/master/packages) 仓库中 [eslint-config-airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb) 版本进行安装。
 
@@ -51,7 +55,7 @@ eslint --init
 }
 ```
 
-> 上述配置中使用了一些 plugins ，可能需要通过命令安装。
+> 上述配置中使用了一些插件，可能需要通过命令执行如下操作进行安装。
 > [eslint-plugin-html](https://github.com/BenoitZugmeyer/eslint-plugin-html) `npm install --save-dev eslint-plugin-html`
 > [eslint-plugin-markdown](https://github.com/eslint/eslint-plugin-markdown) `npm install --save-dev eslint eslint-plugin-markdown`
 > 更多参见[参考这里](https://github.com/dustinspecker/awesome-eslint)
