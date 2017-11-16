@@ -51,7 +51,10 @@ eslint --init
 }
 ```
 
-
+> 上述配置中使用了一些 plugins ，可能需要通过命令安装。
+> [eslint-plugin-html](https://github.com/BenoitZugmeyer/eslint-plugin-html) `npm install --save-dev eslint-plugin-html`
+> [eslint-plugin-markdown](https://github.com/eslint/eslint-plugin-markdown) `npm install --save-dev eslint eslint-plugin-markdown`
+> 更多参见[参考这里](https://github.com/dustinspecker/awesome-eslint)
 
 
 
