@@ -61,7 +61,11 @@ eslint --init
 > 更多参见[参考这里](https://github.com/dustinspecker/awesome-eslint)
 
 
+## 在 Sublime 中使用
 
+需要在编辑器中安装两个插件 `sublimeLinter` 和 `sublimeLinter-contrib-eslint`。
+
+可以使用 `Command + Shift + p`输入 `List Packages` 回车后输入相应的包名称查看上面两个包安装的情况。
 
 
 
