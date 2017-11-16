@@ -5,4 +5,5 @@
 * [ES6中字符串操作](string_operation.md)
 * [ES6中模板渲染](template_rendering.md)
 * [ES6中的箭头函数](arrow_function.md)
-
+* [其他](others/README.md)
+  * [利用 ESLint 检查代码质量](others/eslint_check_code.md)
