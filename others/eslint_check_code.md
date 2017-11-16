@@ -27,8 +27,36 @@ eslint --init
 
 更多配置[参考这里](http://eslint.cn/docs/user-guide/getting-started#configuration)
 
-常见配置如下
+
+
+[airbnb](https://github.com/airbnb/javascript)配置如下
+
+1. 选择 [airbnb](https://github.com/airbnb/javascript/tree/master/packages) 仓库中 [eslint-config-airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb) 版本进行安装。
+
+
 
 ```
-
+{
+    "env": {
+        "browser": true,
+        "node": true,
+        "es6": true
+    },
+    "extends": "airbnb",
+    "plugins": ["html", "markdown"],
+    "rules": {
+        "no-console": 0,
+        "comma-dangle": 0
+    }
+}
 ```
+
+
+
+
+
+
+
+
+
+
